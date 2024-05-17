@@ -1,10 +1,10 @@
 import streamlit as st
-import streamlit as st
+
 def login_page():
     st.title("Login to Chatbot")
     chat_id = st.text_input("Enter your Chat ID")
     if st.button("Login"):
-        if chat_id:  # In real scenario, you'd validate this against a database
+        if chat_id:  # In a real scenario, you'd validate this against a database
             st.session_state['logged_in'] = True
             st.session_state['chat_id'] = '13a040e6ba949f5c9fc3bb2e8c44941193b60bbbde1ff277e575d686da62af18'
         else:
@@ -27,7 +27,6 @@ def main_page():
             # Here you would send user_input to your chatbot model and get the response
             response = f"Chatbot: Echoing '{user_input}'"  # Mock response
             st.session_state['messages'].append(response)
-            st.session_state['input'] = ''  # Clear input box
 
     for message in st.session_state['messages']:
         st.write(message)
@@ -43,4 +42,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
