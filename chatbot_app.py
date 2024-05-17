@@ -11,7 +11,7 @@ def login_page():
             st.error("Please enter a valid Chat ID")
 
 def main_page():
-    st.title("Chatbot Q/A")
+    st.title("ChatBot AI")
     chat_id = st.session_state['chat_id']
     st.write(f"Welcome, {chat_id}")
     
